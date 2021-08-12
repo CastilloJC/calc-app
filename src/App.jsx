@@ -1,6 +1,6 @@
 //Importacion
 import React from 'react'
-import Result from '../components/Result'
+import Result from './components/Result'
 import './App.css'
 
 //Generacion de la funcion del componente
@@ -9,7 +9,7 @@ const App = ()=> {
     //Lo que ejecuta la funcion
     return (
     <main className='react-calculator'>
-      <result> </result>
+      <Result> </Result>
      <div className="numbers">
        <button>1</button>
        <button>2</button>
