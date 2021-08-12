@@ -1,17 +1,22 @@
 //Importacion
 import React from 'react'
+import Button from './components/Button'
+import MathOperations from './components/MathOperations'
 import Result from './components/Result'
 import './App.css'
 
 //Generacion de la funcion del componente
 const App = ()=> {
-  
+  const clickHandlerFunction = text=>{
+    console.log("Button.clickHandler",text)
+  }
+
     //Lo que ejecuta la funcion
     return (
     <main className='react-calculator'>
-      <Result> </Result>
+     <Result />
      <div className="numbers">
-       <button>1</button>
+       <Button text="1" clickHandler={clickHandlerFunction}/>
        <button>2</button>
        <button>3</button>
        <button>4</button>
@@ -22,17 +27,11 @@ const App = ()=> {
        <button>9</button>
        <button>10</button>
        </div>
-       <div className="function">
+       <div className="functions">
          <button>Clear</button>
          <button>r</button>
          </div>
-         <div className="math-operation">
-           <button>+</button>
-           <button>-</button>
-           <button>*</button>
-           <button>/</button>
-           <button>=</button>
-           </div>
+      <MathOperations/>
 
 
   
