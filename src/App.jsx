@@ -1,37 +1,31 @@
 //Importacion
 import React from 'react'
-import Button from './components/Button'
+import Functions from './components/Functions'
 import MathOperations from './components/MathOperations'
+import Numbers from './components/Numbers'
 import Result from './components/Result'
 import './App.css'
 
 //Generacion de la funcion del componente
 const App = ()=> {
-  const clickHandlerFunction = text=>{
-    console.log("Button.clickHandler",text)
-  }
 
     //Lo que ejecuta la funcion
     return (
     <main className='react-calculator'>
      <Result />
-     <div className="numbers">
-       <Button text="1" clickHandler={clickHandlerFunction}/>
-       <button>2</button>
-       <button>3</button>
-       <button>4</button>
-       <button>5</button>
-       <button>6</button>
-       <button>7</button>
-       <button>8</button>
-       <button>9</button>
-       <button>10</button>
-       </div>
-       <div className="functions">
-         <button>Clear</button>
-         <button>r</button>
-         </div>
-      <MathOperations/>
+      <Numbers onClickNumber={number =>{
+      console.log("Click en number", number)}}/>
+      <Functions onContentClear={()=>
+      console.log("Clear")}
+      onDelete={()=>
+        console.log("Delete")
+      }
+      />
+         {/* Operadores matematicos e igual */}
+      <MathOperations onClickOperation={operation => console.log("Operation:", operation)}
+      onClickEqual={equal =>
+        console.log("Equal:" ,equal)
+      }/>
 
 
   

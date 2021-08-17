@@ -1,7 +1,9 @@
 import React from "react"
 import PropTypes from "prop-types"
+import './Button.css'
 
 //Componente funcional
+//Type= button-long-text
 
 const Button = ({ text, type, clickHandler }) => (
     <button className={type} onClick={() => clickHandler(text)}>
