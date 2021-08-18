@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "calculadora-1993",
+    "react-calculator": "calculadora-1993",
+    "calculadora": "calculadora-1993"
+  },
+  "targets": {}
+}
